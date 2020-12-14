@@ -1,0 +1,3 @@
+/data/proj/core_dump_test/build/CMakeFiles/rebuild_cache.dir
+/data/proj/core_dump_test/build/CMakeFiles/target.dir
+/data/proj/core_dump_test/build/CMakeFiles/edit_cache.dir

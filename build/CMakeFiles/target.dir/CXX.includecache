@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/data/proj/core_dump_test/main.cpp
+sys/types.h
+-
+unistd.h
+-
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+
