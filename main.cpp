@@ -3,28 +3,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <map>
 using namespace std;
-
-void foo()
-{
-    int b = 9;
-    int *ptr = &b;
-    *ptr = 7;
-    abort();
-}
 
 int main()
 {
 
-    cout<<"这是一个错误\n";
+    map<int,int> test_map;
+    int num = 11;
+    for(auto i = 0; i < num; ++i)
+    {
+        test_map[i]=i;
+    }
+    auto it = test_map.begin();
+
+    for (; it != test_map.end() ;) {
+        if( (it->second & 1) == 0 )
+        {
+            test_map.erase(it++);
+        }
+        else
+        {
+            it++;
+        }
+    }
 
 
-    foo();
-//    abort();
-
-    printf("看看我是否能打印出来\n");
-
-    sleep(1);       // 防止进程过快退出
+    auto it1 = test_map.begin();
+    while (it1 != test_map.end())
+    {
+        cout<<"first-> "<<it1->first<<" second->"<<it1->second<<endl;
+        it1++;
+    }
 
     return 0;
 }
